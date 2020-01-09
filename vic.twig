@@ -1,0 +1,27 @@
+{% set vic = 'Victor Ekpo' %}
+{# The above is a simple variable definition, with the set command #}
+
+{% set teknixco = ['newera', 'vintagephotog', 'vintagestudio', 'vintagehealth'] %}
+{# The above is an array, similar to a PHP array #}
+
+{% set websites = ['www.neweradesign.net', 'www.vintage-photos.com', 'www.vintagestudio.com', 'www.vintagehealth.com'] %}
+{% set display = {
+   'whoami': vic,
+   'whoisvic': 'is the best',
+   'group': teknixco,
+   'sites': websites
+   }
+%}
+
+{# Now we will call our variables and display them on the screen. A few rules about TWIG SYNTAX. The double curly
+braces are for output generation (something to say), and the curly brace percent sign is for functional use 
+(something to do) #}
+{{ display.whoami }} {{display.whoisvic }}
+{{ display.group[0] }}
+{{ display.sites[0] }}
+
+
+
+{#Similar to PHP, when you call an array, you also have to call the key associated, and keys start with the number 0 #}
+
+{#OKAY, Running it #}
